@@ -1,0 +1,26 @@
+#Posible solucion al ejercicio 20 de https://retosdeprogramacion.com/ejercicios/
+#Crea una función que reciba días, horas, minutos y segundos (como enteros)
+# y retorne su resultado en milisegundos.
+
+
+def milisegundos(dias=0, horas=0, minutos=0, segundos=0):
+  #Calculamos el resultado
+  resultado = (
+              dias * 24 * 60 * 60 +
+              horas * 60 * 60 +
+              minutos * 60 +
+              segundos) * 1000
+
+  #Construimos el mensaje de salida
+  partes = []
+  if dias:
+    partes.append(f"{dias} dias")
+  if horas:
+    partes.append(f"{horas} horas")
+  if minutos:
+    pates.append(f"{minutos} minutos")
+  if segundos:
+    partes.append(f"{segundos} segundos")
+
+  mensaje = " y ".join(", ".join(partes).rsplit(", ", 1))
+  return f"{mensaje} son {resultado} milisegundos"
